@@ -1,0 +1,30 @@
+// Importieren der Variablen
+@use "../abstracts/variables" as *; 
+
+.datenschutz-container {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.datenschutz {
+    background-color: $color-primary-light;
+    font-size: calc(1rem * var(--font-scale));
+    font-weight: normal;
+    color: $color-fonts-primary;
+    text-decoration: none;
+    padding: 2rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto; /* Für Safari und ältere Versionen */
+    -ms-hyphens: auto;    /* Für Internet Explorer */
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: $color-background-secondary;
+    }
+}   
+}

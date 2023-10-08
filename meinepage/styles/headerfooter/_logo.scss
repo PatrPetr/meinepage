@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+@use "../abstracts/variables";
+
+.header a {
+    text-decoration: none; 
+    color: inherit; // Erbt die Farbe vom Elternelement
+}
+
+.header a:hover {
+    text-decoration: none; 
+}
+
+.logo__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1rem;
+    z-index: 14999;
+
+    
+}
+
+.logo{
+    font-family: 'Jost-Bold', sans-serif;
+    font-size: calc(2rem * var(--logo-font-scale));
+    color: $color-fonts-primary;
+    margin: -0.5rem 0 0 2rem;
+    text-shadow: 0 0 0.3rem $color-primary-light;
+}
+
+.logo__subtext {
+    font-family: 'Jost', sans-serif;
+    font-size: calc(0.8rem * var(--logo-font-scale));
+    font-weight: normal;
+    color: $color-fonts-primary;
+    margin: -0.5rem 0 0 2rem;
+    padding: 0;
+    text-shadow: 0 0 0.1rem $color-primary-light;
+}

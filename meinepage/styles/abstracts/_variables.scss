@@ -1,0 +1,45 @@
+@use "sass:color";
+@use "sass:math";
+
+$color-primary: rgb(0, 0, 0)!default;
+$color-background-primary: rgb(247, 247, 249) !default;
+$color-background-secondary: rgb(15, 33, 62) !default;
+$color-header_footer:rgb(4, 20, 45)!default;
+
+$color-fonts-primary: rgb(247, 247, 249) !default; 
+
+$color-h1: color.scale($color-fonts-primary) !default;
+$color-h1-background: color.scale($color-header_footer, $lightness: 50%)!default;
+$color-frames-autor: color.scale($color-background-secondary, $lightness: 90%)!default;
+
+$color-primary-light: rgb(79, 102, 118)!default;
+$color-secondary-light: rgb(150, 7, 7)!default;
+
+$color-bg-snippet-1: color.scale($color-primary-light, $lightness: 10%)!default;
+$color-bg-snippet-2: color.scale($color-primary-light, $lightness: 20%)!default;
+
+
+
+$slope-incline: math.asin(0.1);
+
+/** 1200px oder schmaler */
+$breakpoint-lg: 75em!default;
+
+/** 992px oder schmaler */
+$breakpoint-md: 62em!default;
+
+/** 768px oder schmaler */
+$breakpoint-sm: 48em!default;
+
+/** 576px oder schmaler */
+$breakpoint-xs: 36em!default;
+
+/** 400px oder schmaler */
+$breakpoint-xxs: 25em!default;
+
+/** Breakpoints */
+@media (max-width: $breakpoint-lg) {}
+@media (max-width: $breakpoint-md) {}
+@media (max-width: $breakpoint-sm) {}
+@media (max-width: $breakpoint-xs) {}
+@media (max-width: $breakpoint-xxs) {}

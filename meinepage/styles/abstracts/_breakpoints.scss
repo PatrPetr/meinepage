@@ -1,0 +1,228 @@
+// Importieren der Variablen
+@use "../abstracts/variables" as *;
+
+$-motivation__image-hover-padding: 0.33rem;
+$-motivation__image-hover-border: 0.33rem;
+
+@media (max-width: $breakpoint-lg) {
+    .container,
+    .header .container_header .navigation .navigation_link {
+        width: calc(25% - 2rem);
+    }
+    .image-wrapper { 
+        flex-basis: calc(25% - 2rem);  // 4 pro Reihe, mit Margin
+        max-width: 25%;
+    }
+    
+    .video-wrapper {
+        width: 100%;
+    }
+    .foto_text {
+        flex-direction: column;  // Ändert die Anordnung zu einer Spalte
+    }
+
+    .autorenfoto {
+        width: calc(50% - 2rem);   // Erhöht die Breite des Fotos für Mobilgeräte
+        margin-bottom: 1rem;  // Fügt einen Abstand zwischen dem Foto und dem Text hinzu
+    }
+    .fließtext {
+        width: 100vw;  // Lässt den Text die gesamte Breite des Containers nutzen
+    }
+}
+
+
+
+@media (max-width: $breakpoint-md) {
+    .container,
+    .header .container_header .navigation .navigation_link {
+        width: calc(50% - 2rem);
+    }
+    .image-wrapper { 
+        flex-basis: calc(33.33% - 2rem);  // 3 pro Reihe, mit Margin
+        max-width: 50%;
+    }
+    .video-wrapper {
+        width: 100%;
+    }
+
+    .about-bg {
+        flex-wrap: wrap;
+    }
+    
+    .fließtext_bio .autorenfotos_container {
+        width: 100%;
+    }
+
+
+    .foto_text {
+        flex-direction: column;  // Ändert die Anordnung zu einer Spalte
+    }
+
+    .autorenfoto {
+        width: calc(50% - 2rem);   // Erhöht die Breite des Fotos für Mobilgeräte
+        margin-bottom: 1rem;  // Fügt einen Abstand zwischen dem Foto und dem Text hinzu
+    }
+    .fließtext {
+        width: 100vw;  // Lässt den Text die gesamte Breite des Containers nutzen
+    }
+    
+}
+
+
+
+
+@media (max-width: $breakpoint-sm) {
+    :root {
+        --font-scale: 0.9;
+        --spacing-scale: 0.9; 
+    }
+
+    .container,
+    .header .container_header .navigation .navigation_link {
+        width: calc(50% - 2rem);
+    }
+    .image-wrapper { 
+        flex-basis: calc(50% - 2rem);  // 2 pro Reihe, mit Margin
+        max-width: 100%;
+    }
+    .video-wrapper {
+        width: 100%;
+    }
+
+    .about-bg {
+        flex-wrap: wrap;
+    }
+    
+    .fließtext_bio .autorenfotos_container {
+        width: 100%;
+    }
+    
+    .fließtext {
+        width: 100vw;  // Lässt den Text die gesamte Breite des Containers nutzen
+    }
+
+    .footer p {
+        font-size: 0.4rem;
+    }
+
+}
+
+
+@media (max-width: $breakpoint-xs) {
+
+    :root {
+        --font-scale: 0.7; 
+        --spacing-scale: 0.7;
+        --h1-spacing-scale: 0.5;
+        --h2-spacing-scale: 0.5;
+        --logo-font-scale: 0.7;
+    }
+
+    .container .video-wrapper,
+    .header .container_header .navigation .navigation_link {
+        width: 100%;
+    }
+
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .image-wrapper { 
+        flex-basis: calc(80% - 2rem);  // 1 pro Reihe, mit Margin 
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .about-bg {
+        flex-wrap: wrap;
+    }
+        
+    .fließtext_bio .autorenfotos_container {
+        width: 100%;
+    }
+    
+    .fließtext {
+        flex-wrap: wrap;  // Lässt den Text die gesamte Breite des Containers nutzen
+    }
+
+    .footer p {
+        font-size: 0.4rem;
+    }
+
+    .text-on-image {
+        font-size: calc(var(--font-scale) * 1.3rem);  // 0.7 * 0.7rem = 0.49rem bei xs
+    }
+    .button {
+        font-size: 0.6rem;    // Kleinere Schriftgröße für den Button
+        width: 120px;        // Reduzierte Breite für den Button
+        height: 35px;        // Reduzierte Höhe für den Button
+    }
+    .rezi_block:nth-child(odd) .rezi_snippets,
+    .rezi_block:nth-child(even) .rezi_snippets {
+        width: 100%;
+    }
+    .datenschutz {
+        padding: 1rem;
+    }
+}
+
+
+    @media (max-width: $breakpoint-xxs) {
+        :root {
+            --font-scale: 0.7; 
+            --spacing-scale: 0.4;
+            --h1-spacing-scale: 0.4;
+            --h2-spacing-scale: 0.4;
+            --logo-font-scale: 0.7;
+        }
+    
+        .container .video-wrapper,
+        .header .container_header .navigation .navigation_link {
+            width: 100%;
+        }
+    
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+        .image-wrapper { 
+            flex-basis: calc(80% - 2rem);  // 1 pro Reihe, mit Margin 
+            justify-content: center;
+            align-items: center;
+        
+        }
+        
+        .about-bg {
+            flex-wrap: wrap;
+        }
+            
+        .fließtext_bio .autorenfotos_container {
+            width: 100%;
+       }
+        
+        .fließtext {
+            flex-wrap: wrap;  // Lässt den Text die gesamte Breite des Containers nutzen
+        }
+    
+        .footer p {
+            font-size: 0.25rem;
+        }
+    
+        .text-on-image {
+            font-size: calc(var(--font-scale) * 1rem);  // 0.7 * 0.7rem = 0.49rem bei xs
+        }
+        .button {
+            font-size: 0.5rem;    // Noch kleinere Schriftgröße für den Button
+            width: 110px;        // Weitere reduzierte Breite für den Button
+            height: 30px;        // Weitere reduzierte Höhe für den Button
+        }
+   
+        .datenschutz {
+            padding: 1rem;
+        }
+
+    }

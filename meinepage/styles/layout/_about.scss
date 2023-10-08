@@ -1,0 +1,93 @@
+// Importieren der Variablen
+@use "../abstracts/variables" as *;
+
+$-motivation__image-hover-padding: 0.33rem;
+$-motivation__image-hover-border: 0.33rem;
+
+
+
+.about-bg {
+    background-color: $color-primary-light;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+.foto_text {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+}
+
+.fließtext_bio {
+    font-family: 'Jost', sans-serif;
+    color: $color-fonts-primary;
+    font-size: calc(1rem * var(--font-scale));
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto; /* Für Safari und ältere Versionen */
+    -ms-hyphens: auto;    /* Für Internet Explorer */
+}
+
+.autorenfotos_container {
+    display: flex;
+    width: 100%;
+    min-height: 350px;
+    position: relative;
+    margin-bottom: 4rem;
+    margin-left: 1.5rem;
+    }
+
+
+.autorenfotos {
+    max-width: 50%;
+    position: absolute;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5); 
+    box-sizing: content-box;
+    filter: grayscale(50%);
+    transform: scale(1);
+    transition: filter ease-in-out 0.2s, transform ease-in-out 0.2s;
+
+    &--first {
+        width: 30%;
+        top: 10rem;
+        left: 15%;
+        z-index: 1;
+    }
+
+    &--second {
+        width: 45%;
+        top: 5rem;
+        left: 48%;
+        z-index: 2;
+    }
+
+    &--third {
+        width: 40%;
+        top: 2.5rem;
+        left: 5%;
+        z-index: 3;
+    }
+
+    &--fourth {
+        width: 30%;
+        top: 8rem;
+        left: 35%;
+        z-index: 4;
+    }
+
+    &:hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+        border: $-motivation__image-hover-border solid $color-frames-autor;
+        padding: $-motivation__image-hover-padding;
+        z-index: 10;
+    }
+}

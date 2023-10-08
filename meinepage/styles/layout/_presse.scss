@@ -1,0 +1,64 @@
+// Importieren der Variablen
+@use "../abstracts/variables" as *;
+
+.presse {
+    background-color: $color-primary-light;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+
+.rezi_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+.rezi_block {
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.rezi_block:nth-child(odd) {
+    text-align: left;
+    background-color: $color-bg-snippet-2;
+    padding: 0.5rem 2rem 2rem 2rem;
+    width: 70%;
+    margin-right: 15%;
+}
+
+.rezi_block:nth-child(even) {
+    text-align: right;
+    background-color: $color-bg-snippet-1;
+    padding: 0.5rem 2rem 2rem 2rem;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.rezi_snippets {
+    display: flex;
+    flex-direction: column;
+    text-align: inherit;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    font-size: calc(1.5rem * var(--font-scale));
+    font-weight: normal;
+    margin: 2rem 0 0.5rem 0;
+    padding-top: 0;
+    color: $color-fonts-primary;
+}
+
+.rezi_link {
+    text-align: inherit;
+    font-size: calc(1.2rem * var(--font-scale));
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-decoration: none;
+    color: $color-fonts-primary;
+
+    &:hover {
+        color: $color-header_footer;
+    }
+}
